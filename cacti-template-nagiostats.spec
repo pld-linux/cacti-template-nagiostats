@@ -4,12 +4,13 @@
 Summary:	Nagios Statistics - Cacti scripts and templates
 Name:		cacti-template-%{template}
 Version:	0.1
-Release:	0.5
+Release:	0.6
 License:	GPL v2
 Group:		Applications/WWW
 Source0:	http://forums.cacti.net/download/file.php?id=18185#/nacti.tar.gz
 # Source0-md5:	758d07f15a58c845169b3359bce837c5
 Source1:	cacti_host_template_nagios_statistics.xml
+Source2:	check_nagios.sh
 Patch0:		pld.patch
 URL:		http://forums.cacti.net/about33806.html
 BuildRequires:	rpmbuild(macros) >= 1.554
@@ -33,11 +34,13 @@ Template for Cacti - Nagios statistics.
 %setup -qc
 %patch0 -p1
 cp -a %{SOURCE1} .
+cp -a %{SOURCE2} .
+%{__sed} -i -e 's,check_nagios.pl,check_nagios.sh,' *
 
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT{%{resourcedir},%{scriptsdir},%{nagioscgidir}}
-install -p check_nagios.pl $RPM_BUILD_ROOT%{scriptsdir}
+install -p check_nagios.sh $RPM_BUILD_ROOT%{scriptsdir}
 install -p mrtgstats.cgi $RPM_BUILD_ROOT%{nagioscgidir}
 
 cp -a *.xml $RPM_BUILD_ROOT%{resourcedir}
@@ -57,7 +60,7 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc README
-%attr(755,root,root) %{scriptsdir}/check_nagios.pl
+%attr(755,root,root) %{scriptsdir}/check_nagios.sh
 %{resourcedir}/*.xml
 
 # nagios-cacti-nagiostats
