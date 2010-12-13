@@ -1,0 +1,11 @@
+--- cgi/mrtgstats.cgi~	2009-08-15 12:28:36.000000000 +0300
++++ cgi/mrtgstats.cgi	2010-12-12 23:13:10.620598093 +0200
+@@ -10,7 +10,7 @@
+ my $request_type;
+ 
+ # Location of the nagiostat binary
+-my $nagiostat = '/usr/bin/nagiostats';
++my $nagiostat = '/usr/sbin/nagiostats';
+ 
+ # Does the nagiostat binary even exist?
+ if ( ! -e $nagiostat) {

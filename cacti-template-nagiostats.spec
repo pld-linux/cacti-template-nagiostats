@@ -4,12 +4,13 @@
 Summary:	Nagios Statistics - Cacti scripts and templates
 Name:		cacti-template-%{template}
 Version:	0.1
-Release:	0.4
+Release:	0.5
 License:	GPL v2
 Group:		Applications/WWW
 Source0:	http://forums.cacti.net/download/file.php?id=18185#/nacti.tar.gz
 # Source0-md5:	758d07f15a58c845169b3359bce837c5
 Source1:	cacti_host_template_nagios_statistics.xml
+Patch0:		pld.patch
 URL:		http://forums.cacti.net/about33806.html
 BuildRequires:	rpmbuild(macros) >= 1.554
 BuildRequires:	sed >= 4.0
