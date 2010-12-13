@@ -1,0 +1,7 @@
+<cacti>	
+	<hash_020021927b6d945bb9d7bf65ad49eae23408b6>
+		<name>Nagios Statistics</name>
+		<graph_templates>hash_000021b21467573ffcaf541082c68ae3621a3e|hash_00002128de4bf6501270035c961da975a3354c|hash_000021f5caa82c8cc6971cf390c70cfdca5d7b|hash_0000211650a4e09bad948de266e6aaa716a093|hash_0000212757aadda13a70673244dfdebd167c5c|hash_00002116d6dd87812b4c1f47fffe97f511deeb</graph_templates>
+		<data_queries></data_queries>
+	</hash_020021927b6d945bb9d7bf65ad49eae23408b6>
+</cacti>
