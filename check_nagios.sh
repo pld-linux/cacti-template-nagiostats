@@ -11,6 +11,11 @@ password="$4"
 # Remove trailing slash if needed
 url="${url%/}"
 
+if [ -z "$url" ]; then
+	echo >&2 "Usage: $0 URL TYPE [USER PASSWORD]"
+	exit 1
+fi
+
 # pass user and password conditionally.
 # this way we can even have passwords in them.
 # retry only once with timeout of 30s
