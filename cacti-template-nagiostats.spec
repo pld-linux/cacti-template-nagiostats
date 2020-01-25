@@ -3,7 +3,6 @@
 #   this is limitation of cacti, but you can manually join the DS with graphs
 #   and delete overkill.
 %define		template	nagiostats
-%include	/usr/lib/rpm/macros.perl
 Summary:	Nagios Statistics - Cacti scripts and templates
 Name:		cacti-template-%{template}
 Version:	0.1
